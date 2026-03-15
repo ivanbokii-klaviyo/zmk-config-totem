@@ -69,7 +69,7 @@ label= "NAVI"                              ;
 
                 &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                 &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &studio_unlock
                                         &trans      &trans      &trans          &mo ADJ     &kp KP_N0   &trans
                         >;
                 };
