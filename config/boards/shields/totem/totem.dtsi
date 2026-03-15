@@ -5,11 +5,58 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &totem_physical_layout;
+    };
+
+    totem_physical_layout: totem_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "TOTEM";
+        transform = <&default_transform>;
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100   85  149 (-1000)   135  199>
+            , <&key_physical_attrs 100 100  200   61  (-400)   250  111>
+            , <&key_physical_attrs 100 100  316    3      0      0    0>
+            , <&key_physical_attrs 100 100  418   51      0      0    0>
+            , <&key_physical_attrs 100 100  520   66      0      0    0>
+            , <&key_physical_attrs 100 100  847   66      0      0    0>
+            , <&key_physical_attrs 100 100  949   51      0      0    0>
+            , <&key_physical_attrs 100 100 1051    3      0      0    0>
+            , <&key_physical_attrs 100 100 1166   61    400   1216  111>
+            , <&key_physical_attrs 100 100 1282  149   1000   1332  199>
+            , <&key_physical_attrs 100 100  102  244 (-1000)   152  294>
+            , <&key_physical_attrs 100 100  206  157  (-400)   256  207>
+            , <&key_physical_attrs 100 100  316  100      0      0    0>
+            , <&key_physical_attrs 100 100  418  148      0      0    0>
+            , <&key_physical_attrs 100 100  520  163      0      0    0>
+            , <&key_physical_attrs 100 100  847  163      0      0    0>
+            , <&key_physical_attrs 100 100  949  148      0      0    0>
+            , <&key_physical_attrs 100 100 1051  100      0      0    0>
+            , <&key_physical_attrs 100 100 1160  157    400   1210  207>
+            , <&key_physical_attrs 100 100 1264  244   1000   1314  294>
+            , <&key_physical_attrs 100 100   10  314 (-1000)    60  364>
+            , <&key_physical_attrs 100 100  119  339 (-1000)   169  389>
+            , <&key_physical_attrs 100 100  213  253  (-400)   263  303>
+            , <&key_physical_attrs 100 100  316  197      0      0    0>
+            , <&key_physical_attrs 100 100  418  244      0      0    0>
+            , <&key_physical_attrs 100 100  520  259      0      0    0>
+            , <&key_physical_attrs 100 100  847  259      0      0    0>
+            , <&key_physical_attrs 100 100  949  244      0      0    0>
+            , <&key_physical_attrs 100 100 1051  197      0      0    0>
+            , <&key_physical_attrs 100 100 1154  253    400   1204  303>
+            , <&key_physical_attrs 100 100 1248  339   1000   1298  389>
+            , <&key_physical_attrs 100 100 1356  314   1000   1406  364>
+            , <&key_physical_attrs 100 100  390  361      0      0    0>
+            , <&key_physical_attrs 100 100  502  376   1500    552  426>
+            , <&key_physical_attrs 100 100  608  419   3000    658  469>
+            , <&key_physical_attrs 100 100  758  419 (-3000)   808  469>
+            , <&key_physical_attrs 100 100  864  376 (-1500)   914  426>
+            , <&key_physical_attrs 100 100  978  361      0      0    0>
+        ;
     };
 
     default_transform: keymap_transform_0 {
@@ -32,7 +79,7 @@
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        
+
         diode-direction = "col2row"; 
         row-gpios
             = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
