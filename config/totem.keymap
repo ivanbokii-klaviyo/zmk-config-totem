@@ -69,7 +69,7 @@
 
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans     &trans    &trans  &trans     &trans
-        &trans  &trans  &trans  &trans  &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
+        &trans  &trans  &kp LSHFT  &kp LALT  &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp LCTRL
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &trans  &studio_unlock
                         &trans  &trans  &trans    &mo ADJ  &trans  &trans
             >;
